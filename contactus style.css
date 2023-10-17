@@ -1,0 +1,122 @@
+*{
+margin:0; 
+padding:0;
+font-family:"Poppins", sans-serif;
+box-sizing:border-box;
+}
+.contact{
+position:relative;
+height:100vh;
+width:100%;
+padding:40px 90px;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+.contact .content{
+width:800px;
+text-align:center;
+}
+.contact .content h2{
+font-size:36px;
+font-weight:500;
+color:red;
+}
+.contact .content p{
+font-weight:300;
+color:red;
+}
+.container{
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+margin-top:30px;
+}
+.container .contactInfo{
+width:70%;
+display:flex;
+flex-direction:column;
+}
+.container .contactInfo .box{
+position:relative;
+padding:22px 45px;
+display:flex;
+}
+.container .contactInfo .box .text{
+display:flex;
+margin-left:65px;
+font-size:16px;
+color:purple;
+flex-direction:column;
+font-weight:300;
+}
+.container .contactInfo .box .text h3{
+font-weight:500;
+color:purple;
+}
+.contactForm{
+width:40%;
+padding:30px;
+background:lime;
+}
+.contactForm h2{
+font-size:30px;
+color:#333;
+font-weight:500;
+}
+.contactForm .inputBox{
+position:left;
+width:100%;
+margin-top:10px;
+}
+.contactForm .inputBox input,.contactForm .inputBox textarea{
+width:90%;
+padding:12px 0;
+font-size:16px;
+margin:10px 0;
+border:none;
+border-bottom:2px solid #333;
+outline:none;
+resize:none;
+}
+.contactForm .inputBox span{
+position:absolute;
+left:65%;
+text-align:center;
+align-items:center;
+padding:10px 0;
+font-size:16px;
+margin:20px 0;
+pointer-events:none;
+transition:0.3s;
+color:#666;
+}
+.contactForm .inputBox input:focus ~ span,.contactForm .inputBox input:valid ~ span,.contactForm .inputBox textarea:focus ~ span,.contactForm .inputBox textarea:focus ~ span{
+color:silver;
+font-size:12px;
+transform:translate(-20px);
+}
+.contactForm .inputBox input[type="submit"]{
+width:80px;
+background:blue;
+color:red;
+border:none;
+cursor:pointer;
+padding:10px;
+font-size:18px;
+}
+@media (max-width:990px){
+.contact{
+padding:50px;
+}
+.container{
+flex-direction:column;
+}
+.container .contactInfo{
+margin-bottom:40px;
+}
+.container .contactInfo,.contactForm{
+width:100%;
+}

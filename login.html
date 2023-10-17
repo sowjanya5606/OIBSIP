@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>login page</title>
+<link rel="stylesheet" type="text/css" href="C:\Users\navya\OneDrive\Desktop\SOWJANYA\fsad lab\CSS files\style.css"/>
+<script type="text/javascript">
+function formValidation()
+{
+var uid=document.form1.userid;
+var passid=document.form1.passid;
+if(alphanumeric(uid))
+{
+if(passid_validation(passid,10))
+{
+}
+}
+return false;
+}
+function alphanumeric(uid)
+{
+var letters=/^[0-9a-zA-Z]+$/;
+if(uid.value.match(letters))
+{
+return true;
+}
+else
+{
+alert("please input alphanumeric characters only");
+uid.focus();
+return false;
+}
+}
+function passid_validation(passid,mx)
+{
+var passid_len=passid.value.length;
+if(passid_len==0||passid_len>mx)
+{
+alert("password should be in length");
+passid.focus();
+return false;
+}
+else
+{
+alert("Form successfully submitted");
+return true;
+}
+}
+</script>
+</head>
+<body background="C:\Users\navya\OneDrive\Desktop\SOWJANYA\fsad lab\PICTURES\pexels-george-milton-7014337.jpg" style="background-repeat: no-repeat;background-size:cover;position:relative;">
+<div class="div1">
+<h1 align="center" padding="5" margin="5">Login Form</h1>
+<form name="form1" onSubmit="return formValidation()">
+<table cellpadding="5" align="center" >
+<tr>
+<td>User id: </td>
+<td><input type="text" name="userid" size="25" value=" "/></td>
+</tr>
+<tr>
+<td>Password: </td>
+<td><input type="password" name="passid" size="25" value=""/></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><input type="submit" name="submit" value="Submit"/></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</form>
+</div>
+</body>
+</html>
